@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaksi - Rental Mobil</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container">
+            <a href="home-060.html" class="brand">DriveGo</a>
+            <ul class="nav-menu">
+                <li><a href="home-060.html">Beranda</a></li>
+                <li><a href="profile-060.html">Profile</a></li>
+                <li><a href="transaksi-060.html" class="active">Transaksi</a></li>
+                <li><a href="login-060.html">Login</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2 class="text-primary text-center mb-4">Manajemen Transaksi</h2>
+            
+            <div class="grid-transaksi">
+                <div class="card">
+                    <h3 class="text-primary mb-4" style="border-bottom: 2px solid #eee; padding-bottom: 10px;">Form Input</h3>
+                    <form id="formTransaksi">
+                        <div class="form-group">
+                            <label for="namaPenyewa">Nama Penyewa</label>
+                            <input type="text" id="namaPenyewa" class="form-control" placeholder="Masukkan nama...">
+                        </div>
+                        <div class="form-group">
+                            <label for="jenisMobil">Jenis Mobil</label>
+                            <select id="jenisMobil" class="form-control">
+                                <option value="" data-nama="">-- Pilih Mobil --</option>
+                                <option value="700000" data-nama="Toyota Hilux">Toyota Hilux - Rp 700k/hari</option>
+                                <option value="300000" data-nama="Honda Civic Turbo">Honda Civic Turbo - Rp 300k/hari</option>
+                                <option value="650000" data-nama="Mitsubishi Lancer Evo 7">Mitsubishi Lancer Evo 7 - Rp 650k/hari</option>
+                                <option value="500000" data-nama="Mazda RX-7">Mazda RX-7 - Rp 500k/hari</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="lamaSewa">Lama Sewa (Hari)</label>
+                            <input type="number" id="lamaSewa" class="form-control" placeholder="Contoh: 3" min="1">
+                        </div>
+                        <div class="form-group">
+                            <label>Total Harga Transparansi</label>
+                            <input type="text" id="totalHargaTampil" class="form-control form-readonly" value="Rp 0" readonly>
+                        </div>
+                        <button type="submit" class="btn btn-success">Simpan Transaksi</button>
+                    </form>
+                </div>
+
+                <div class="card">
+                    <h3 class="text-primary mb-4" style="border-bottom: 2px solid #eee; padding-bottom: 10px;">List Transaksi</h3>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>Penyewa</th>
+                                    <th>Mobil</th>
+                                    <th>Sewa</th>
+                                    <th>Total Biaya</th>
+                                </tr>
+                            </thead>
+                            <tbody id="dataTransaksi">
+                                </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 DriveGo Rental. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
